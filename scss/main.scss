@@ -1,0 +1,165 @@
+/* 
+Project Name: 	Final Project
+Client: 		Juice VCR
+Author: 		Jessica Straker
+*/
+
+@import "normalize";
+
+
+// COLOURS //
+
+$title: #a0a5a8; 
+$main-text: #f5f5f5;
+
+// SENSIBLE DEFAULTS //                  
+
+* {
+     box-sizing: border-box;
+}
+
+div {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+/******************************************
+/* TYPOGRAPHY
+/*******************************************/
+
+body {
+	font-size: 14px;
+    font-family: 'Atlas Typewriter Web', Helvetica, Arial, sans-serif;
+}
+
+h2 {
+	color: $title;
+    font-size: 60px;
+    line-height: 40px;
+    margin-bottom: 32px;
+    position: absolute;
+    right: 0;
+    top: -70px;
+    transform-origin: 100% 100%;
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 100% 100%;
+    -webkit-transform: rotate(-90deg);
+    text-align: right;
+    z-index: 30;
+    font-weight: bold;
+}
+
+h3 {
+	color: $title;
+	font-size:24px;
+}
+
+#rsvp p 
+, ul, li, h4 {
+    color: $main-text;
+}
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+body {
+	max-width: 100%;
+	background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay-bg {
+	position:absolute;
+	top: 0;
+    left: 40px;
+    bottom: 40px;
+    right: 0;
+	background: url('../images/bg.gif');
+}
+
+.overlay-table {
+	display: table;
+    width: 35%;
+    min-width: 300px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.overlay-table-inner {
+	display: table-cell;
+    vertical-align: middle;
+    width: 100px;
+}
+
+.closebutton {
+    color: #fff;
+    fill: currentColor;
+    font-size: 60px;
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+}
+
+
+/******************************************
+/* HELPER CLASSES
+/*******************************************/
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+     content: " ";
+     display: table;
+}
+.clearfix:after {
+     clear:both;
+}
+
+.is-hidden {
+     display: none;
+}
+.is-visible {
+     display: block;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+input {
+	background: none;
+	border: none;
+	border-bottom: 2px #fff solid;
+
+	&:focus, &:active {
+	outline: none;
+	}
+
+	value {
+	color: $main-text;
+	}
+}
+
+
+svg[Attributes Style] {
+    x: 0px;
+    y: 0px;
+    width: 120px;
+    height: 120px;
+}
+user agent stylesheet
+html|* > svg {
+    transform-origin: 50% 50% 0px;
+}
+user agent stylesheet
+svg:not(:root), symbol, image, marker, pattern, foreignObject {
+    overflow: hidden;
+}
+user agent stylesheet
+* {
+    transform-origin: 0px 0px 0px;
+}
