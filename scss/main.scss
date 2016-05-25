@@ -1,21 +1,13 @@
-/* 
-Project Name: 	Final Project
-Client: 		Juice VCR
-Author: 		Jessica Straker
-*/
-
 @import "normalize";
 
 
-// COLOURS //
+// SENSIBLE DEFAULTS //
 
 $title: #a0a5a8; 
-$main-text: #f5f5f5;
-
-// SENSIBLE DEFAULTS //                  
+$main-text: #f5f5f5;                  
 
 * {
-     box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 div {
@@ -24,9 +16,7 @@ div {
 	padding: 0;
 }
 
-/******************************************
-/* TYPOGRAPHY
-/*******************************************/
+// TYPOGRAPHY//
 
 body {
 	font-size: 14px;
@@ -50,7 +40,7 @@ h2 {
     font-weight: bold;
 }
 
-h3 {
+h3, #glistThanks, #glistFull {
 	color: $title;
 	font-size:24px;
 }
@@ -58,11 +48,15 @@ h3 {
 #rsvp p 
 , ul, li, h4 {
     color: $main-text;
+    line-spacing: 0.5;
+    text-shadow: 2px #f5f5f5 solid;
 }
 
-/******************************************
-/* LAYOUT                   
-/*******************************************/
+#glistThanks, #glistFull {
+    display: none;
+}
+
+// LAYOUT //
 
 body {
 	max-width: 100%;
@@ -78,6 +72,7 @@ body {
     bottom: 40px;
     right: 0;
 	background: url('../images/bg.gif');
+	background-size: 3px;
 }
 
 .overlay-table {
@@ -104,9 +99,8 @@ body {
 }
 
 
-/******************************************
-/* HELPER CLASSES
-/*******************************************/
+// HELPER CLASSES //
+
 
 /* Clearfix */
 .clearfix:before,
@@ -126,22 +120,40 @@ body {
 }
 
 
-/******************************************
-/* ADDITIONAL STYLES                   
-/*******************************************/
+// ADDITIONAL STYLES //
 
-input {
+@media (max-width: 1024px) {
+	.overlay-bg {
+    left: 24px;
+    bottom: 24px;
+    }
+}
+
+#email, :focus  {
+	width: 100%;
+	float:left;
 	background: none;
 	border: none;
+    font-size: 24px;
 	border-bottom: 2px #fff solid;
-
-	&:focus, &:active {
-	outline: none;
-	}
-
-	value {
 	color: $main-text;
-	}
+	text-transform: lowercase;
+    outline: none;
+    overflow: visible;
+
+}
+
+#form-field {
+    display: block;
+}
+
+label input {
+    float:right;    
+    background: $main-text;
+    font-size: 24px;
+    border-top: none;
+    border: 1px #fff solid;
+	display: inline;
 }
 
 

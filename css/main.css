@@ -1,8 +1,3 @@
-/* 
-Project Name: 	Final Project
-Client: 		Juice VCR
-Author: 		Jessica Straker
-*/
 /*! 
 LATEST VERSION: 
 https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css
@@ -370,9 +365,6 @@ div {
   margin: 0;
   padding: 0; }
 
-/******************************************
-/* TYPOGRAPHY
-/*******************************************/
 body {
   font-size: 14px;
   font-family: 'Atlas Typewriter Web', Helvetica, Arial, sans-serif; }
@@ -397,17 +389,19 @@ h2 {
   z-index: 30;
   font-weight: bold; }
 
-h3 {
+h3, #glistThanks, #glistFull {
   color: #a0a5a8;
   font-size: 24px; }
 
 #rsvp p
 , ul, li, h4 {
-  color: #f5f5f5; }
+  color: #f5f5f5;
+  line-spacing: 0.5;
+  text-shadow: 2px #f5f5f5 solid; }
 
-/******************************************
-/* LAYOUT                   
-/*******************************************/
+#glistThanks, #glistFull {
+  display: none; }
+
 body {
   max-width: 100%;
   background-color: black;
@@ -420,7 +414,8 @@ body {
   left: 40px;
   bottom: 40px;
   right: 0;
-  background: url("../images/bg.gif"); }
+  background: url("../images/bg.gif");
+  background-size: 3px; }
 
 .overlay-table {
   display: table;
@@ -442,9 +437,6 @@ body {
   bottom: -20px;
   left: -20px; }
 
-/******************************************
-/* HELPER CLASSES
-/*******************************************/
 /* Clearfix */
 .clearfix:before,
 .clearfix:after {
@@ -460,17 +452,32 @@ body {
 .is-visible {
   display: block; }
 
-/******************************************
-/* ADDITIONAL STYLES                   
-/*******************************************/
-input {
+@media (max-width: 1024px) {
+  .overlay-bg {
+    left: 24px;
+    bottom: 24px; } }
+#email, :focus {
+  width: 100%;
+  float: left;
   background: none;
   border: none;
-  border-bottom: 2px #fff solid; }
-  input:focus, input:active {
-    outline: none; }
-  input value {
-    color: #f5f5f5; }
+  font-size: 24px;
+  border-bottom: 2px #fff solid;
+  color: #f5f5f5;
+  text-transform: lowercase;
+  outline: none;
+  overflow: visible; }
+
+#form-field {
+  display: block; }
+
+label input {
+  float: right;
+  background: #f5f5f5;
+  font-size: 24px;
+  border-top: none;
+  border: 1px #fff solid;
+  display: inline; }
 
 svg[Attributes Style] {
   x: 0px;
