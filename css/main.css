@@ -368,9 +368,10 @@ th {
 
 marquee {
   position: absolute;
-  top: 90%;
+  bottom: 25px;
   background: rgba(0, 0, 0, 0.5);
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 56px; }
 
 body {
   margin: 0 auto;
