@@ -4,17 +4,38 @@
 	top: 10px;
 	left: 10px;
 	right: 10px;
-    bottom: 10px;
+  bottom: 10px;
 	background: url('../images/bg.gif');
 	background-size: 3px;
+}
+
+.overlay-table-full {
+  position:absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  width: 100%;
+  min-width: 300px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 marquee {
 	position: absolute;
 	bottom: 25px;
   left: 146px;
+  max-width: 750px;
 	background: rgba(0,0,0,0.5);
 	margin: 0 auto;
+  padding: 0;
+  height: 56px;
+  box-shadow: -15px 0 15px -15px inset;
+
+  h3 {
+    margin: auto;
+    padding: 10px;
+  }
 
 }
 
